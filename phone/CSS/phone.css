@@ -1,0 +1,96 @@
+.body
+{
+	height: 480px;
+	width: 320px;
+	font-family: "Lucida Grande", Helvetica, sans-serif;
+}
+
+.classLoginbody
+{
+	/*width: 100%;*/
+	padding: 20px;
+	border: 1px solid #270644;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    /*** Background Gradient - 2 declarations one for Firefox and one for Webkit ***/
+    background:  -moz-linear-gradient(19% 50% 90deg,#777777, #EEEEEE);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDDDDD),color-stop(50%,#DDDDDD),to(#777777));
+    /*** Shadow behind the box ***/
+    -moz-box-shadow:0px -5px 300px #333333;
+    -webkit-box-shadow:0px -5px 300px #333333;
+	font-weight:bold;
+	font-size: small;
+	color:#444;
+}
+.classInput
+{
+	width: 150px;
+    color: #00D;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+   /* border-top: 1px solid #F90;
+    margin-top: 10px;
+    /*** Adding CSS3 Gradients ***/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,#FFFFFF);
+    background:  -moz-linear-gradient(19% 75% 90deg,#FFFFFF);
+}
+.classButton
+{
+display: inline-block;
+padding: 5px 10px 6px;
+color: #FFF;
+text-decoration: none;
+font-weight: bold;
+line-height: 1;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+border-bottom: 1px solid rgba(0,0,0,0.25);
+position: relative;
+cursor: pointer;
+background:  -moz-linear-gradient(19% 50% 90deg,#777777, #EEEEEE);
+background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDDDDD),color-stop(50%,#444444),to(#EEE));}
+.classMainBody
+{
+    background: transparent;
+    background: center;
+    height: 98%;
+    width: 90%;
+    padding: 2%;
+}
+.classHeader
+{
+	text-align:center;
+	color:#EEEEEE;
+ /*margin-top: 66px;*/  
+    padding: 10px;  
+    background: #222222 repeat-x;  
+    background-size: 100%;  
+    border-radius: 22px; 
+	 background:  -moz-linear-gradient(19% 75% 90deg,#BBBBBB, #444444);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#444444), to(#BBBBBB));
+	font-weight:bolder;
+}  
+.classFooter
+{
+	text-align:center;
+	height: 15px;
+	font-size:9px;
+  color:#EEEEEE;
+ /*margin-top: 66px;*/  
+    padding: 2px;  
+    background: #222222 repeat-x;  
+    background-size: 100%;  
+    border-radius: 22px; 
+	 background:  -moz-linear-gradient(19% 75% 90deg,#000000, #888888);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#888888), to(#000000));
+}  
+}
+.classBody
+{
+  height: 80%;
+  width: 100%;
+  float: left;
+}

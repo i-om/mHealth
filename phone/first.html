@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Welcome</title>
+  <script type="text/javascript" src="jquery/jquery-1.4.4.js"></script>
+  <script type="text/javascript" src="util.js"></script>
+    <link rel="stylesheet" href="CSS/phone.css" type="text/css" />
+   <script type="text/javascript">
+  var regexp=/^[a-zA-Z \.\']*$/;
+
+    $(document).ready(function()
+    {
+      srchButton();
+      addButton();
+      reDirect(0);
+
+    });
+  </script>
+<!--  <script type="text/javascript" src="jquery/ui/ui.core.js"></script>
+  <script type="text/javascript" src="jquery/ui/ui.draggable.js"></script>
+  <script type="text/javascript" src="jquery/ui/ui.resizable.js"></script>
+  <script type="text/javascript" src="jquery/ui/ui.dialog.js"></script>
+  <script type="text/javascript" src="jquery/ui/effects.core.js"></script>
+  <script type="text/javascript" src="jquery/ui/effects.highlight.js"></script>
+  <script type="text/javascript" src="jquery/external/bgiframe/jquery.bgiframe.js"></script>
+  <link type="text/css" href="jquery/themes/jquery-ui-1.7.2.custom.css" rel="stylesheet" />
+  <script type="text/javascript" src="jquery/ui/effects.blind.js"></script>
+    <script type="text/javascript" src="jquery/ui/ui.datepicker.js"></script>
+  <script type="text/javascript">
+  var regexp=/^[a-zA-Z]*$/;
+    $(document).ready(function()
+    {
+          $('#iddob').datepicker({
+    	  changeMonth: true,
+          dateFormat: 'dd-mm-yy',
+          changeYear: true ,
+      });
+
+   
+  <style type="text/css">
+    body
+    {
+	    margin:0;
+    	padding:0;
+        font-size: 80%;
+    }
+    label, input { display:inline; }
+    input.text { margin-bottom:12px; width:95%; padding: .4em; }
+    fieldset { padding:0; border:0; margin-top:25px; }
+    h1 { font-size: 1.2em; margin: .6em 0; }
+    div#users-contain {  width: 350px; margin: 20px 0; }
+    div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+    div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+    .ui-button { outline: 0; margin:0; padding: .4em 1em .5em; text-decoration:none;  cursor:pointer; position: relative; text-align: center; }
+    .ui-dialog .ui-state-highlight, .ui-dialog .ui-state-error { padding: .3em;  }
+    #ui-datepicker-div
+    {
+        z-index:1250;
+        font-size: 100%;
+    }
+</style>  -->
+</head>
+
+<body>
+  <div id="idmaindiv" class="body">
+<div id="idmainbodydiv" class="classMainBody">
+        <div id="idheaderdiv" class="classHeader"  align="center">
+            Phone Gap Application
+            <img src="images/logo.jpg" align="right" height="auto"/>
+        </div>
+        <div id="idbodydiv" class="classBody"  align="center">
+<div id="idlogoutdiv" style="text-align:right">
+<a href="http://192.168.1.12/Wel/Welcome/logout.php" style="color:black"><u>Logout</u></a>
+</div>
+
+<br/>
+<form action="http://192.168.1.12/Wel/Welcome/search.php?login_status=1" method="POST" id="idsearchform" class="classsearchform" onsubmit="return  $('#idsearchbtn').click();">
+
+<h2 align="center">SEARCH DOCTOR</h2>
+<br/>
+<div id="idsearchtxtdiv"  class="classsearchtxtdiv" align="center">
+<input type="text" name="search" id="idsearchtxt" class="classsearchtxt" />
+</div>
+<br/>
+<div id="idsearchbtndiv" class="classsearchbtndiv" align="center">
+<input type="submit" name="searchbtn" value="Search" id="idsearchbtn" class="classsearchbtn" />
+</div>
+</form>
+
+<br/>
+<br/>
+<hr/>
+<hr/>
+<form action="http://192.168.1.12/Wel/Welcome/insert.php?login_status=1" method="POST" id="idinfo" class="classinfo">
+<br/>
+<br/>
+<h2 align="center">ADD NEW DOCTOR</h2>
+<br/>
+<table id="idinserttable" align="center">
+<tr>
+<td>
+<div id="iddoctordiv" class="classdoctordiv">
+<b>Doctor Name :</b>
+</div>
+</td>
+<td>
+<div id="iddoctortxtdiv" class="classdoctortxtdiv">
+<input name="doctorname" type="text" id="iddoctorname" class="classdoctorname" />
+</div>
+</td>
+<td>
+<div id="idclinicnodiv" class="classclinicnodiv">
+<b>Clinic Number :</b>
+</div>
+</td>
+<td>
+<div id="idclinicnotxtdiv" class="classclinicnotxtdiv">
+<input name="clinicnumber" type="text" id="idclinicno" class="classclinicno" />
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="idclinicdiv" class="classclinicdiv">
+<b>Clinic/Hospital Name :</b>
+</div>
+</td>
+<td>
+<div id="idclinictxtdiv" class="classclinictxtdiv">
+<input name="clinicname" type="text" id="idclinicname" class="classclinicname" />
+</div>
+</td>
+<td>
+<div id="idspecialdiv" class="classspecialdiv">
+<b>Specialization :</b>
+</div>
+</td>
+<td>
+<div id="idspecialtxtdiv" class="classspecialtxtdiv">
+<input type="text" name="specialization" id="idspecial" class="classspecial" />
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="idaddressdiv" class="classaddressdiv">
+<b>Address :</b>
+</div>
+</td>
+<td>
+<div id="idaddresstxtdiv" class="classaddresstxtdiv">
+<textarea name="address" id="idaddress" class="classaddress" ></textarea>
+</div>
+</td>
+<td>
+<div id="idlandmarkdiv" class="classlandmarkdiv">
+<b>Landmark :</b>
+</div>
+</td>
+<td>
+<div id="idlandmarktxtdiv" class="classlandmarktxtdiv">
+<input name="landmark" type="text" id="idlandmark" class="classlandmark" />
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="idpincodediv" class="classpincodediv">
+<b>Pincode :</b>
+</div>
+</td>
+<td>
+<div id="idpincodetxtdiv" class="classpincodetxtdiv">
+<input name="pincode" type="text" id="idpincode" class="classpincode" />
+</div>
+</td>
+<td>
+<div id="idcitydiv" class="classcitydiv">
+<b>City :</b>
+</div>
+</td>
+<td>
+<div id="idcitytxtdiv" class="classcitytxtdiv">
+<input name="city" type="text" id="idcity" class="classcity" />
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="idstatediv" class="classstatediv">
+<b>State :</b>
+</div>
+</td>
+<td>
+<div id="idstatetxtdiv" class="classstatetxtdiv">
+<input name="state" type="text" id="idstate" class="classstate" />
+</div>
+</td>
+<td>
+<div id="idcountrydiv" class="classcountrydiv">
+<b>Country :</b>
+</div>
+</td>
+<td>
+<div id="idcountrytxtdiv" class="classcountrytxtdiv">
+<input name="country" type="text" id="idcountry" class="classcountry" />
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="idmobilediv" class="classmobilediv">
+<b>Mobile Number :</b>
+</div>
+</td>
+<td>
+<div id="idmobiletxtdiv" class="classmobiletxtdiv">
+<input name="mobileno" type="text" id="idmobileno" class="classmobileno" />
+</div>
+</td>
+<td>
+<div id="idemaildiv" class="classemaildiv">
+<b>E-mail :</b>
+</div>
+</td>
+<td>
+<div id="idemailtxtdiv" class="classemailtxtdiv">
+<input name="email" type="text" id="idemail" class="classemail" />
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="idclinictimediv" class="classclinictimediv">
+<b>Clinic Timings :</b>
+</div>
+</td>
+<td>
+<div id="idclinictimetxtdiv" class="classclinictimetxtdiv">
+<textarea name="clinictime" id="idclinictime" class="classclinictime" ></textarea>
+</div>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="4">
+<div id="idsubmitdiv" class="classsubmitdiv">
+<input type="submit" name="Submit" value="Submit"  id="idsubmit" class="classsubmit" />
+</div>
+</td>
+</tr>
+</table>
+
+</form>
+</div>
+<div id="idfooterdiv" class="classFooter"  align="center">
+            Copyright &copy 2011 <b><a href=http://www.plus91.in target=_blank >Plus91</a></b>. All Rights Reserved.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
